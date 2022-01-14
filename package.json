@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/meistudioli/yahoo-auction-automation/issues"
   },
-  "homepage": "https://github.com/meistudioli/yahoo-auction-automation#readme"
+  "homepage": "https://github.com/meistudioli/yahoo-auction-automation#readme",
+  "dependencies": {
+    "puppeteer": "^13.0.1"
+  }
 }

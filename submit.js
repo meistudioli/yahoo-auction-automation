@@ -15,11 +15,11 @@ const { login, submit, terminate } = require('./common.js');
   await login({ id:'seller', page });
   const merchandiseId = await submit({ page });
   console.log('merchandiseId: '+merchandiseId);
-  await page.screenshot({ path: 'screenshot/submit-ok.png', fullPage:true });
+  await page.screenshot({ path: 'submit-ok.png', fullPage:true });
 
   // As a seller, I could terminate merchandise.
   await terminate({ merchandiseId, page });
-  await page.screenshot({ path: 'screenshot/ternimate.png', fullPage:true });
+  await page.screenshot({ path: 'ternimate.png', fullPage:true });
 
   await browser.close();
 })();

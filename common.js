@@ -87,8 +87,6 @@ module.exports = {
     await page.select('[name="shipType[0][type]"]', '.s7c');
     await page.type('[name="shipType[0][freight]"]', '60');
 
-    await page.screenshot({ path: 'screenshot/submit.png', fullPage: true });
-
     await page.click('.browser-btn input[type="submit"]');
     await page.waitForNavigation();
 
