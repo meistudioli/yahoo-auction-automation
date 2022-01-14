@@ -11,7 +11,7 @@ This is an automation (pupeteer) for TW Yahoo Auction. It will go through the fo
 
 ### Prepare Accounts
 
-You will need to prepare TW Yahoo Auction accouts for buyer & seller. Than modify common.js accout information.
+You will need to prepare TW Yahoo Auction accouts for buyer & seller. Than modify common.js accout information. (seller account needs to turn paytype:`7-11` on.)
 
 ```javascript
 const account = {
