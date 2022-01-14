@@ -7,6 +7,8 @@ This is an automation (pupeteer) for TW Yahoo Auction. It will go through the fo
 3. As a **buyer**, I could cancel an order.
 4. As a **seller**, I could terminate merchandise.
 
+[![og_19](https://user-images.githubusercontent.com/10822546/149465481-03046d6e-2b99-42fe-937a-baacdb258a66.png)](https://www.youtube.com/watch?v=9GFPPKpQYbg)
+
 ## Getting Started
 
 ### Prepare Accounts
