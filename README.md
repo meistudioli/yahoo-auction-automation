@@ -1,6 +1,6 @@
 # TW Yahoo Auction Automation
 
-This is an automation (pupeteer) for TW Yahoo Auction. It will go through the folllowing steps.
+This is an automation (pupeteer) for TW Yahoo Auction. It will go through the following steps.
 
 1. As a **seller**, I could submit a new merchandise.
 2. As a **buyer**, I could purchase merchandise.
