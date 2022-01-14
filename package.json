@@ -1,0 +1,25 @@
+{
+  "name": "yahoo-auction-automation",
+  "version": "1.0.0",
+  "description": "Puppeteer exercise - from submit merchandise to payok at TW Yahoo Auction.",
+  "main": "dragon.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meistudioli/yahoo-auction-automation.git"
+  },
+  "keywords": [
+    "web",
+    "front-end",
+    "automation",
+    "puppeteer"
+  ],
+  "author": "Paul Li",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meistudioli/yahoo-auction-automation/issues"
+  },
+  "homepage": "https://github.com/meistudioli/yahoo-auction-automation#readme"
+}
