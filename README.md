@@ -2,10 +2,10 @@
 
 This is an automation (pupeteer) for TW Yahoo Auction. It will go through the folllowing steps.
 
-1. As a **seller**，I could submit a new merchandise.
-2. As a **buyer**，I could purchase merchandise.
-3. As a **buyer**，I could cancel an order.
-4. As a **seller**，I could terminate merchandise.
+1. As a **seller**, I could submit a new merchandise.
+2. As a **buyer**, I could purchase merchandise.
+3. As a **buyer**, I could cancel an order.
+4. As a **seller**, I could terminate merchandise.
 
 ## Getting Started
 
