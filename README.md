@@ -19,11 +19,13 @@ You will need to prepare TW Yahoo Auction accouts for buyer & seller. Than modif
 const account = {
   seller: {
     username: 'your_seller_username',
-    password: 'your_seller_password'
+    password: 'your_seller_password',
+    ecid: 'your_seller_ecid',
   },
   buyer: {
     username: 'your_buyer_username',
-    password: 'your_buyer_password'
+    password: 'your_buyer_password',
+    ecid: 'your_buyer_ecid',
   }
 };
 ```
