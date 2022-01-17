@@ -45,5 +45,8 @@ node dragon.js
 ```
 
 ## Reference
-- [demo](https://www.youtube.com/watch?v=9GFPPKpQYbg)
+- [Demo > dragon](https://youtu.be/9GFPPKpQYbg)
+- [Demo > minichat](https://youtu.be/W5ktoicnNMo)
+- [First touch with Puppeteer](https://meistudio.medium.com/first-touch-with-puppeteer-801b0730c3)
 - [Puppeteer](https://github.com/puppeteer/puppeteer)
+
