@@ -1,6 +1,6 @@
 {
   "name": "yahoo-auction-automation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Puppeteer exercise - from submit merchandise to payok at TW Yahoo Auction.",
   "main": "dragon.js",
   "scripts": {

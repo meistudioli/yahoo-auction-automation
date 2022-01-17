@@ -2,10 +2,12 @@ const account = {
   seller: {
     username: 'your_seller_username',
     password: 'your_seller_password',
+    ecid: 'your_seller_ecid',
   },
   buyer: {
     username: 'your_buyer_username',
     password: 'your_buyer_password',
+    ecid: 'your_buyer_ecid',
   },
 };
 
@@ -154,5 +156,53 @@ module.exports = {
     await page.waitForSelector('.yui3-button.button-primary');
     await page.click(`.yui3-button.button-primary`);
     await page.waitForNavigation();
+  },
+  chat: async ({ id, page }) => {
+    const { ecid } = account[id];
+    const selectorForMessageReady =
+      '#im-mini-chatroom [class*=messageList]>div:nth-last-child(1) [class*=memo]';
+
+    await page.goto(`https://tw.bid.yahoo.com/booth/${ecid}`, {
+      waitUntil: 'networkidle2',
+    });
+    await page.waitForSelector('#im-mini-chatroom button');
+    await page.click('#im-mini-chatroom button');
+    await page.waitForSelector('#im-mini-chatroom [class*=miniChatRoom]');
+    // make sure fetch channel data done
+    await page.waitForSelector(selectorForMessageReady);
+
+    // text
+    const greeting = `Greeting from puppteer - ${new Date().getTime()}`;
+    await page.type('#im-mini-chatroom textarea[class*=textInput]', greeting);
+    await page.waitForSelector(
+      '#im-mini-chatroom button[name=sendButton]:not([disabled])'
+    );
+    await page.click('#im-mini-chatroom button[name=sendButton]');
+    await page.waitForFunction(
+      `document.querySelector("#im-mini-chatroom").innerText.includes("${greeting}")`
+    );
+    await page.waitForSelector(selectorForMessageReady);
+
+    // image
+    const inputImage = await page.$('#im-mini-chatroom [name="imageUpload"]');
+    await inputImage.uploadFile('images/i_19_512x512.png');
+    await page.waitForSelector(
+      '#im-mini-chatroom [class*=messageList]>div:nth-last-child(1) [class*=imageMsg]'
+    );
+    await page.waitForSelector(selectorForMessageReady);
+
+    // sticker
+    await page.click('#im-mini-chatroom button[name=stickerButton]');
+    await page.waitForSelector(
+      '#im-mini-chatroom [class*=stickerSuitesBox]:not([class*=hidden])'
+    );
+    await page.click('#im-mini-chatroom [class*=stickerBox]');
+    await page.click(
+      '#im-mini-chatroom [class*=stickerSuitesBox] [class*=closeButton]'
+    );
+    await page.waitForSelector(
+      '#im-mini-chatroom [class*=messageList]>div:nth-last-child(1) [class*=msgSticker]'
+    );
+    await page.waitForSelector(selectorForMessageReady);
   },
 };
